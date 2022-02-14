@@ -121,6 +121,7 @@ def chat():
         if result[results_index] > 0.6:
             for tg in data["intents"]:
                 if tg['tag'] == tag:
+                    print("["+tag+"]")
                     responses = tg['responses']
             
             print("JavaMate : "+random.choice(responses))
