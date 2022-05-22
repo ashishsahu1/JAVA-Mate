@@ -95,17 +95,6 @@
     },
 
     {
-      "tag": "GoodBye",
-      "patterns": ["Bye", "Adios", "See you later", "Goodbye"],
-      "responses": [
-        "See you later",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ],
-      "context_set": ""
-    },
-
-    {
       "tag": "WhoAmI",
       "patterns": [
         "Can you see me?",
@@ -224,21 +213,12 @@
         "Basic java program",
         "first java program"
       ],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"],
-      "context": [""]
-    },
-    {
-      "tag": "thanks",
-      "patterns": [
-        "Thanks",
-        "Thank you",
-        "That's helpful",
-        "Awesome, thanks",
-        "Thanks for helping me"
+      "responses": [
+        "Great have a look up on https://www.programiz.com/java-programming/hello-world"
       ],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"],
       "context": [""]
     },
+    
 
     {
       "tag": "botname",
