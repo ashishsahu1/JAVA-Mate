@@ -1,0 +1,129 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Chat with 💙Java-Mate</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='Images/asset-5.png') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='static.css') }}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+    <script src="{{url_for('static', filename='static.js')}}"></script>
+
+</head>
+
+<body onload="document.base1.base2.base3.base4.base5.base6.usermsg.focus();">
+    <div id="base" class="row container-fluid h-100 justify-content-center">
+        <div id="base2" class="col-md-8 col-xl-6 chat">
+            <div id="base3" class="card">
+                <div class="card-header msg_head">
+                    <div class="d-flex bd-highlight">
+                        <div class="img_cont">
+                            <img src="../static/Images/asset-5.png" class="rounded-circle user_img">
+                            <span class="online_icon"></span>
+                        </div>
+                        <div class="user_info">
+                            <!-- <span>A.I.R.A</span> -->
+                            <span>JAVA-Mate</span>
+                            <!-- <p>Artificial Intelligence (AI-Bot) Resume for Ashish</p> -->
+                        </div>
+                    </div>
+                    <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
+                    <div class="action_menu">
+                        <ul>
+                           <a style="text-decoration: none; color: white;"  href="https://github.com/ashishsahu1/JAVA-Mate"><li class="ttt"><i class="fas fa-user-circle"></i> Github
+                            </li></a>
+                            <a style="text-decoration: none; color: white;" href="https://gfgc.kar.nic.in/sirmv-science/GenericDocHandler/138-a2973dc6-c024-4d81-be6d-5c3344f232ce.pdf"><li><i class="fas fa-user-circle"></i>Book</li></a>
+                            <a style="text-decoration: none; color: white;" href="https://docs.oracle.com/en/java/"><li><i class="fas fa-user-circle"></i> References </li></a>
+                            <!-- <li><i class="fas fa-info-circle"></i> About</li> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="myMessageContainer" class="msg_container_base card-body msg_card_body">
+
+                    <!-- Aira response -->
+                    <div class="d-flex justify-content-start mb-4">
+                        <div class="img_cont_msg">
+                            <img src="../static/Images/asset-5.png" class="rounded-circle user_img_msg">
+                        </div>
+                        <!-- <div class="msg_cotainer">
+                            Hey👋, This is A.I.R.A, an advanced AI-Bot Resume, for Ashish
+                        </div> -->
+                        <div class="msg_cotainer">
+                            Hey👋, This is JAVA-Mate, an advanced AI-Bot to teach JAVA
+                        </div>
+                    </div>
+
+
+                    {% for chat in allChat %}
+                    <!-- user respnse -->
+                    <div class="d-flex justify-content-end mb-4">
+                        <div class="msg_cotainer_send">
+                            {{chat.user}}
+                        </div>
+                        <div class="img_cont_msg">
+                            <img src="../static/Images/asset-2.png" class="rounded-circle user_img_msg">
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- bot response -->
+                    <div class="d-flex justify-content-start mb-4">
+                        <div class="img_cont_msg">
+                            <img src="../static/Images/asset-5.png" class="rounded-circle user_img_msg">
+                        </div>
+                        <div class="msg_cotainer">
+                            <p>{{chat.bot}}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+                <div id="base4" class="card-footer">
+                    <div id="base5" class="input-group">
+                        <!-- type_msg -->
+                        <!-- form-control -->
+                        <form class="form-base" id='base6' name="message" action="/get" method='post'>
+                            <input style="float: left;" class="form-control h-100 input-lg type_msg"
+                                placeholder="Type your query..." name="msg" type="text" id="usermsg" />
+                            <button style="visibility: hidden;" type="submit" id="submit" value="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        $('#myMessageContainer').stop().animate({
+            scrollTop: $('#myMessageContainer')[0].scrollHeight
+        });
+
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("submit").click();
+            }
+        });
+
+        document.base1.base2.base3.base4.base5.base6.usermsg.focus();
+    </script>
+
+</body>
+
+</html>
