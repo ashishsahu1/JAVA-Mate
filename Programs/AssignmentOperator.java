@@ -1,5 +1,3 @@
-package Programs;
-
 public class AssignmentOperator {
     public static void main(String[] args) {
 

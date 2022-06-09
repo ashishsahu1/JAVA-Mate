@@ -214,7 +214,7 @@
         "first java program"
       ],
       "responses": [
-        "A basic HelloWorld program in JAVA looks like this <a href=\"https://github.com/ashishsahu1/JAVA-Mate/blob/main/Programs/HelloWorld.java\">HelloWorld.java</a> \n 1. Class definition : This line uses the keyword class to declare that a new class is being defined. \n 2. HelloWorld : It is an identifier that is the name of the class. \n public static void main(String[] args) : <b>public</b> So that JVM can execute the method from anywhere. <b>static</b> as the main method is to be called without an object. *void* as main method doesn’t return anything. *main* Name configured in the JVM. *String[]* The main method accepts a single argument, i.e., an array of elements of type String. "
+        "A basic HelloWorld program in JAVA looks like this https://github.com/ashishsahu1/JAVA-Mate/blob/main/Programs/HelloWorld.java \n 1. Class definition : This line uses the keyword class to declare that a new class is being defined. \n 2. HelloWorld : It is an identifier that is the name of the class. \n 3. public static void main(String[] args) : [public] So that JVM can execute the method from anywhere. [static] as the main method is to be called without an object. *void* as main method doesn’t return anything. *main* Name configured in the JVM. *String[]* The main method accepts a single argument, i.e., an array of elements of type String. "
       ],
       "context": [""]
     },
@@ -235,6 +235,39 @@
         "Hola !! Java-Mate here.."
       ],
       "context_set": ""
+    },
+
+    {
+      "tag": "string",
+      "patterns": [
+        "What is a string",
+        "string?",
+        "something about string?",
+        "tell me something about string"
+      ],
+      "responses": [
+        "In Java, string is basically an object that represents sequence of char values. An array of characters works same as Java string.",
+        "Java String class provides a lot of methods to perform operations on strings such as compare(), concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() etc.",
+        "Sample java string \n\n char[] ch={'j','a','v','a','t','p','o','i','n','t'}; \n String s=new String(ch);  "
+      ],
+      "context_set": ""
+    },
+
+    {
+      "tag": "array",
+      "patterns": [
+        "What is a array",
+        "array?",
+        "something about array?",
+        "tell me something about array"
+      ],
+      "responses": [
+        "Java array is an object which contains elements of a similar data type. Additionally, The elements of an array are stored in a contiguous memory location. It is a data structure where we store similar elements. We can store only a fixed set of elements in a Java array.",
+        "Array in Java is index-based, the first element of the array is stored at the 0th index, 2nd element is stored on 1st index and so on.",
+        "Sample array code : "
+      ],
+      "context_set": ""
     }
+
   ]
 }
